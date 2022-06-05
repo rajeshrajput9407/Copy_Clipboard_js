@@ -1,24 +1,3 @@
 # Copy_Clipboard_js
 we can copy test/
 
-
-<html>
-<body>
-<p id="p1">P1: I am paragraph 1</p>
-<p id="p2">P2: I am a second paragraph</p>
-<button onclick="copyToClipboard('#p1')">Copy P1</button>
-<button onclick="copyToClipboard('#p2')">Copy P2</button>
-<br/><br/><input type="text" placeholder="Paste here for test" />
-</body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script>
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
-</script>
-
-</html>
